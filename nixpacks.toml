@@ -1,0 +1,12 @@
+[phases.install]
+cmds = ["npm install"]
+
+[phases.build]
+cmds = [
+  "npm run build --workspace=packages/shared-types",
+  "cd apps/api && npx prisma generate",
+  "npm run build --workspace=apps/api"
+]
+
+[start]
+cmd = "node apps/api/dist/index.js"
