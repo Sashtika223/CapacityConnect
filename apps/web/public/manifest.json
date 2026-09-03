@@ -1,0 +1,16 @@
+{
+  "short_name": "CapacityConnect",
+  "name": "IMD MoES Capacity Connect Portal",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0B132B",
+  "theme_color": "#0c8ee9",
+  "display": "standalone",
+  "orientation": "portrait"
+}
