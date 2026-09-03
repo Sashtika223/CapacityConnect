@@ -9,7 +9,8 @@
   "scripts": {
     "dev:api": "npm run dev --workspace=apps/api",
     "dev:web": "npm run dev --workspace=apps/web",
-    "build": "npm run build --workspaces",
+    "build": "npm run build --workspace=packages/shared-types && npm run build --workspace=apps/api && npm run build --workspace=apps/web",
+    "build:web": "npm run build --workspace=packages/shared-types && npm run build --workspace=apps/web",
     "db:generate": "npm run db:generate --workspace=apps/api",
     "db:push": "npm run db:push --workspace=apps/api",
     "db:seed": "npm run db:seed --workspace=apps/api",
