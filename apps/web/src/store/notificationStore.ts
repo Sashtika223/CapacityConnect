@@ -32,7 +32,8 @@ export const useNotificationStore = create<NotificationState>((set, get) => ({
   initSocket: (userId?: string, role?: string) => {
     if (get().socket) return; // already initialized
 
-    const socket = io(window.location.origin, {
+    const socketUrl = import.meta.env.VITE_API_URL || window.location.origin;
+    const socket = io(socketUrl, {
       transports: ['websocket', 'polling']
     });
 
