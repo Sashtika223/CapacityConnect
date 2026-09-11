@@ -55,4 +55,12 @@ class AuthenticationTest extends TestCase
         $response = $this->actingAs($trainee)->get('/admin/dashboard');
         $response->assertStatus(403);
     }
+
+    public function test_trainee_can_access_trainee_dashboard(): void
+    {
+        $trainee = User::factory()->trainee()->create();
+
+        $response = $this->actingAs($trainee)->get('/trainee/dashboard');
+        $response->assertStatus(200);
+    }
 }
